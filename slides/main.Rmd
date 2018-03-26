@@ -11,14 +11,11 @@ runtime: shiny
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Preview
+## Git in Action: Finding an easter egg
 
-1. edit a textfile
-2. git add
-3. git commit
-4. git push
-5. look at github
-6. find commit by collaborator
+The following example shows one of the more advanced git functions in order to hunt down the point in history when a bug was introduced. 
+
+=> [easter repository](https://github.com/mbannert/easter)
 
 
 ## :~$ whoami
@@ -93,6 +90,24 @@ fluidPage(sidebarLayout(sidebarPanel(
 - (+) professional collaboration workflow
 - (+) distributed backup
 
+
+## Git is decentralized
+
+<img src="decentralized_1.png" />
+
+## Git is decentralized
+
+<img src="decentralized_2.png" />
+
+## Git is decentralized
+
+<img src="decentralized_3.png" />
+
+## Git is decentralized
+
+<img src="decentralized_4.png" />
+
+
 ## Git is decentralized
 
 <img src="decentralized.png" />
@@ -107,7 +122,7 @@ fluidPage(sidebarLayout(sidebarPanel(
     - project management
     - wiki
     
-  - alternatives: bitbucket, gitlab
+  - alternatives: [bitbucket](https://bitbucket.org/), [gitlab](https://about.gitlab.com/)
   - GUIs: Github Desktop, Source Tree, Tortoise
 
 ## Excursion: Log in like a developer
@@ -136,6 +151,15 @@ spades are group admins.
 
 <img src="royal_flush.jpg" />
 
+## Preview: A basic task
+
+1. edit a textfile
+2. git add
+3. git commit
+4. git push
+5. look at github
+6. find commit by collaborator
+
 ## Task 1: setup a repository
 
 - admins: goto github and create a git repository
@@ -150,6 +174,15 @@ spades are group admins.
 - team members: get the latest update from the remote repository
 
 helpul commands: git status, git remote -v
+
+## Things you should not commit
+
+- passwords
+- large binary files
+- auxiliary files or output that is generated automatically
+
+=> **.gitignore** file helps to blacklist files, file formats or folders.
+
 
 ## Task 3: The first conflict
 
@@ -221,8 +254,6 @@ hint: use a commit message that refers to the issue by its number, like
     - branch PR: collaborator in the team
     - fork PR: (from user to contributor)
     
-## Summary
-
 ## Git Gut Check Pt. II
 
 - git clone
@@ -237,6 +268,20 @@ hint: use a commit message that refers to the issue by its number, like
 - git branch
 - git checkout
 - (git bisect)
+
+
+## Summary & Outlook
+
+- git is very powerful
+- in practice, most people only need
+    - git push 
+    - git pull 
+    - git add
+    - git commit
+    - git status
+    
+regularly.
+- next step: continous integration, regular builds.
 
 
 ## Resources 
