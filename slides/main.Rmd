@@ -136,22 +136,6 @@ spades are group admins.
 
 <img src="royal_flush.jpg" />
 
-## Git Gut Check Pt. II
-
-- git clone
-- git init
-- git remote -v
-- git add, git commit, git push 
-- git pull origin
-- git status
-- git log
-- git diff
-- git fetch
-- git branch
-- git checkout
-- (git bisect)
-
-
 ## Task 1: setup a repository
 
 - admins: goto github and create a git repository
@@ -167,14 +151,23 @@ spades are group admins.
 
 helpul commands: git status, git remote -v
 
-## Task 4: The first conflict
+## Task 3: The first conflict
 
 - everybody: create a file called your_name.md
 - add some text to the file
 - commit the file and add it to your teams repository
 - does it work? What happens? 
 
-## Task 5: conflicts that need manual intervention
+## A quick note on the vim editor
+
+<img src="vim.png" height="400px" />
+
+@windows users: if you prefer another editor, change it:
+git config --global core.editor "C:/Windows/system32/notepad.exe"
+
+
+
+## Task 4: conflicts that need manual intervention
 
 - pick two team members.
 - first member: create a file named *team.md*
@@ -186,7 +179,7 @@ helpul commands: git status, git remote -v
 
 - What happens? What does git do to help you fix this?
 
-## Task 3: Undo
+## Task 5: Undo
 
 - revert changes to single file
 - revert commit
@@ -229,6 +222,21 @@ hint: use a commit message that refers to the issue by its number, like
     - fork PR: (from user to contributor)
     
 ## Summary
+
+## Git Gut Check Pt. II
+
+- git clone
+- git init
+- git remote -v
+- git add, git commit, git push 
+- git pull origin
+- git status
+- git log
+- git diff
+- git fetch
+- git branch
+- git checkout
+- (git bisect)
 
 
 ## Resources 
