@@ -214,8 +214,10 @@ git config --global core.editor "C:/Windows/system32/notepad.exe"
 
 ## Task 5: Undo
 
-- revert changes to single file
-- revert commit
+- revert changes to a single, unpushed file
+- revert an unpushed commit
+
+=> git checkout filename
 
 ## Professional development workflow /w git
 
@@ -229,7 +231,7 @@ git config --global core.editor "C:/Windows/system32/notepad.exe"
 
 hint: git log --graph --pretty=oneline
 
-## Task 5: create a feature branch to tackle an issue
+## Task 6: create a feature branch to tackle an issue
 
 - admin: raise an issue using the issue tracker
 - make sure you're up to date before working on the feature
@@ -237,13 +239,15 @@ hint: git log --graph --pretty=oneline
 - add branches to the remote search path
 - use the Github GUI to issue a PR
 
+=> hint: git push -u origin branchname
+
 ## Task 6 merge a pull request
 
 - team admin: approve review 
 - merge pull request into another branch using github
 
-hint: use a commit message that refers to the issue by its number, like
-**closes #2**. 
+hint: use a commit message that refers to the 
+issue by its number, like **closes #2**. 
 
 ## Forks vs branch PR
 
@@ -272,16 +276,11 @@ hint: use a commit message that refers to the issue by its number, like
 
 ## Summary & Outlook
 
+<img src="so_survey.png"/>
+
 - git is very powerful
-- in practice, most people only need
-    - git push 
-    - git pull 
-    - git add
-    - git commit
-    - git status
-    
-regularly.
-- next step: continous integration, regular builds.
+- in practice, most people only need a few operations regularly.
+
 
 
 ## Resources 
