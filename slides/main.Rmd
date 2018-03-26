@@ -300,6 +300,17 @@ issue by its number, like **closes #2**.
 - [github hello word tutorial](https://guides.github.com/activities/hello-world/)
 
 
-
+<!--
+# some tricks
+git log --oneline | head -1
+git shortlog
+git log --decorate
+git log --graph
+git log --after="2014-7-1"
+git log --after="yesterday"
+git log --author="John"
+git log --grep="JRA-224:"
+git log --no-merges
+-->
 
 
