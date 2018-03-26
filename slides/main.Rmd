@@ -4,6 +4,7 @@ author: "Matthias Bannert"
 date: "27 Mar 2018"
 output: ioslides_presentation
 widescreen: yes
+runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
@@ -36,9 +37,45 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Git Gut Check
 
-- use R
-- passively use git
-- actively use git
+```{r,echo=FALSE}
+library(grid)
+library(shiny)
+source("bullet.R")
+
+fluidPage(sidebarLayout(sidebarPanel(
+  numericInput("members", "Number of participants", 20),
+  numericInput("rstats", "R Statistical langauge", 10),  
+  numericInput("passive", "passive git", 10),
+  numericInput("active", "active git", 10)
+  ),
+  mainPanel(
+    renderPlot({
+      techavg <- mean(c(input$rstats,
+                        input$passive,
+                        input$active) / input$members)*100
+  df1 <- data.frame(units = c("R(%)","p. git(%)","act. git(%)"),
+                    low = c(25,25,25),
+                    mean = c(50,50,50),
+                    high = c(100,100,100),
+                    target = c(techavg,techavg,techavg),
+                    value = c(100*(input$rstats/input$members),
+                              100*(input$passive/input$members),
+                              100*(input$active/input$members)
+                              )
+                    )
+
+  g <- gridBulletGraphH(df1,bcol = c("#999999","#CCCCCC","#E1E1E1"),
+                   vcol = "#333333",font = 20)
+
+  g + title(paste("Usage of Technologies Among Participants", sep=" "))
+
+})  
+
+
+    )
+  ))
+
+```
 
 ## Git Breakdown
 
@@ -104,16 +141,15 @@ spades are group admins.
 - git clone
 - git init
 - git remote -v
-- git add
-- git commit
-- git push 
+- git add, git commit, git push 
 - git pull origin
 - git status
 - git log
 - git diff
+- git fetch
 - git branch
 - git checkout
-(- git bisect)
+- (git bisect)
 
 
 ## Task 1: setup a repository
@@ -174,11 +210,25 @@ hint: git log --graph --pretty=oneline
 - switch branches by checking out the new feature-branch
 - add branches to the remote search path
 - use the Github GUI to issue a PR
-- team admin: approve review and merge
+
+## Task 6 merge a pull request
+
+- team admin: approve review 
+- merge pull request into another branch using github
 
 hint: use a commit message that refers to the issue by its number, like
 **closes #2**. 
 
+## Forks vs branch PR
+
+- fork: work with different remote repositories
+- branch: same remote repository
+- use cases: 
+    - fork used with different, mostly external owners 
+    - branch PR: collaborator in the team
+    - fork PR: (from user to contributor)
+    
+## Summary
 
 
 ## Resources 
