@@ -90,6 +90,16 @@ fluidPage(sidebarLayout(sidebarPanel(
 - (+) professional collaboration workflow
 - (+) distributed backup
 
+## Git is decentralized - implications on a basic task
+
+1. edit a textfile
+2. git add
+3. git commit
+4. git push
+5. look at github
+6. find commit by collaborator
+
+
 
 ## Git is decentralized
 
@@ -151,14 +161,6 @@ spades are group admins.
 
 <img src="royal_flush.jpg" />
 
-## Preview: A basic task
-
-1. edit a textfile
-2. git add
-3. git commit
-4. git push
-5. look at github
-6. find commit by collaborator
 
 ## Task 1: setup a repository
 
@@ -174,7 +176,7 @@ spades are group admins.
 - team members: get the latest update from the remote repository
 - What are the differences between the last two commits? 
 
-helpful commands: git status, git remote -v, git diff HEAD~1..HEAD~2 > diffs.txt
+helpful commands: git status, git remote -v, git diff $HEAD~1..HEAD~2$ > diffs.txt
 
 ## Things you should not commit
 
@@ -219,7 +221,9 @@ git config --global core.editor "C:/Windows/system32/notepad.exe"
 - revert an unpushed commit
 
 => git checkout filename
+
 => git revert hash
+
 => git reset --hard hash
 
 ## Professional development workflow /w git
