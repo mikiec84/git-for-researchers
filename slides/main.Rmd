@@ -172,8 +172,9 @@ spades are group admins.
 - admins: create a text file with minimal content
 - admins: add, commit and push the file
 - team members: get the latest update from the remote repository
+- What are the differences between the last two commits? 
 
-helpul commands: git status, git remote -v
+helpful commands: git status, git remote -v, git diff HEAD~1..HEAD~2 > diffs.txt
 
 ## Things you should not commit
 
@@ -218,6 +219,8 @@ git config --global core.editor "C:/Windows/system32/notepad.exe"
 - revert an unpushed commit
 
 => git checkout filename
+=> git revert hash
+=> git reset --hard hash
 
 ## Professional development workflow /w git
 
